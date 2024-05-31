@@ -21,7 +21,7 @@ def create_record(azara_record, rui_record):
     if rui_coordinate == azara_coordinate:
         return combined_record
     else:
-        return "no es compatible"
+        return "not a match"
 
 
 print(create_record(('Brass Spyglass', '4B'), ('Abandoned Lighthouse', ('4', 'B'), 'Blue')))
