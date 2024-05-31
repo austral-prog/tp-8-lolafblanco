@@ -1,7 +1,14 @@
 # pylint: disable-all
 # flake8: noqa,
 
-ALCOHOLS = {"whiskey", "whisky", "white rum", "dark rum", "bourbon", "rye", "scotch", "vodka",
-            "tequila", "gin", "dry vermouth", "sweet vermouth", "prosecco","aperol", "brandy", "mezcal",
-            "triple sec", "coffee liqueur", "almond liqueur", "champagne", "orange curacao", "rum"
-            }
+ALCOHOLS = {
+    'vodka', 'rum', 'whiskey', 'tequila', 'gin', 'brandy', 'vermouth', 'triple sec',
+    'cognac', 'bourbon', 'scotch', 'absinthe', 'liqueur', 'champagne', 'beer', 'wine'
+}
+
+def check_drinks(drink_name, ingredients):
+    # Check if any of the ingredients are in the ALCOHOLS set
+    if any(ingredient in ALCOHOLS for ingredient in ingredients):
+        return f"{drink_name} Cocktail"
+    else:
+        return f"{drink_name} Mocktail"
